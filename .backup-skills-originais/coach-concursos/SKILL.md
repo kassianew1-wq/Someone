@@ -3,14 +3,14 @@ name: coach-concursos
 description: >
   Analisa editais e provas de concursos públicos (especialmente bancas como FCC, CESPE, FGV)
   para extrair inteligência estratégica: peso real de cada disciplina, padrões de cobrança da
-  banca, matriz de prioridades esforço por retorno, cruzamentos entre temas, onde o candidato
-  mediano perde pontos e ordem de ataque. Use SEMPRE que o usuário enviar edital, prova ou
-  gabarito, ou pedir "análise de banca", "prioridades de estudo", "o que cai mais", "como a
-  banca cobra", "insights de prova", "resumo do edital", "pesos das matérias", "onde focar" —
-  inclusive informalmente ("o que devo estudar primeiro?", "vale a pena focar em X?").
-  Calibrada para o padrão FCC em Auditoria e Fiscalização Estadual. NÃO use para resolver
-  questão isolada nem tirar dúvida de conteúdo (use concurseira-fiscal), nem para corrigir
-  discursiva (use corretor-discursivas-fcc).
+  banca, matriz de prioridades esforço × retorno, cruzamentos entre temas, onde o candidato
+  mediano perde pontos, e ordem de ataque recomendada. Use esta skill SEMPRE que o usuário
+  enviar um edital, uma prova, um gabarito ou pedir "análise de banca", "prioridades de estudo",
+  "o que cai mais", "como a banca cobra", "insights de prova", "resumo do edital", "mapa de
+  temas", "pesos das matérias", "onde focar", ou qualquer combinação dessas ideias — mesmo
+  que o pedido seja informal ("o que devo estudar primeiro?", "vale a pena focar em X?").
+  Aplica-se a qualquer concurso fazendário, fiscal ou de carreira de estado, mas foi calibrada
+  especificamente para o padrão FCC em provas de Auditoria e Fiscalização Estadual.
 ---
 
 # Skill: Coach Concursos — Inteligência de Prova
@@ -35,7 +35,7 @@ Verifique o que o usuário forneceu:
 | Prova(s) em markdown/PDF | Questões por disciplina; temas reais cobrados; nível de dificuldade; armadilhas recorrentes |
 | Gabarito | Taxa de acerto estimada por bloco (se houver estatística disponível) |
 
-Se o material estiver em PDF, leia com `pdftotext` ou `python3 -c "import pdfplumber..."`.
+Se o material estiver em PDF, leia com `bash_tool` + `pdftotext` ou `python3 -c "import pdfplumber..."`.
 Se estiver em markdown ou texto, leia diretamente.
 
 ### Etapa 2 — Construir a tabela de pesos reais
@@ -67,10 +67,6 @@ Para cada disciplina do foco (as indicadas pelo usuário ou as de maior peso), e
 Use o formato de tabela para organizar isso por disciplina.
 
 ### Etapa 4 — Construir a matriz de prioridades
-
-Havendo banco de erros com volume, cruzar com ele antes de estimar: tema de alto
-peso no edital e alta reincidência no banco é prioridade máxima **medida**, não
-estimada. Sem banco, seguir com a estimativa abaixo e dizer que é estimativa.
 
 Classifique cada tema em dois eixos:
 
@@ -108,7 +104,7 @@ Máximo 8 linhas. Concreto e acionável.
 - **Formato padrão**: prosa introdutória + tabelas. Nunca listas de bullets soltas sem contexto.
 - **Tom**: analítico e direto. Sem elogios ao candidato, sem frases motivacionais vazias.
 - **Idioma**: Português Brasileiro, tom profissional-acadêmico.
-- **Quando gerar PDF ou figura**: se o usuário pedir um guia, relatório ou documento para download, aplique também as skills `pdf` ou `pptx`. As figuras matplotlib (mapa mental, gráfico de pontos, matriz esforço × retorno) devem seguir o padrão visual estabelecido: paleta NAVY/TEAL/AMBER/PURPLE, fontes DejaVu Sans, fundo branco.
+- **Quando gerar PDF ou figura**: se o usuário pedir um guia, relatório ou documento para download, aplique também as skills `pdf` e/ou `pptx`. As figuras matplotlib (mapa mental, gráfico de pontos, matriz esforço × retorno) devem seguir o padrão visual estabelecido: paleta NAVY/TEAL/AMBER/PURPLE, fontes DejaVu Sans, fundo branco.
 - **Citação de normas**: cite sempre o número do CPC, NBC TSP, lei ou decreto — nunca apenas o nome genérico.
 - **Transparência sobre resoluções numéricas**: sempre que apresentar cálculo de questão, sinalize que é resolução do compilador e deve ser conferida contra o gabarito oficial da banca.
 
@@ -118,47 +114,14 @@ Máximo 8 linhas. Concreto e acionável.
 
 Leia o arquivo de referência correspondente quando identificar a banca:
 
-| Banca identificada | Arquivo a ler |
-|---|---|
-| FCC | `references/banca-fcc.md` |
-| CESPE / CEBRASPE | `references/banca-cespe.md` |
-| FGV | `references/banca-fgv.md` |
-| Não identificada | Aplicar os princípios gerais desta SKILL.md e informar ao usuário que a banca não pôde ser confirmada |
-
-Estes arquivos são a **fonte única** sobre padrão de banca. Nenhuma outra skill
-deve duplicar este conteúdo; quem precisar, aponta para cá.
+- FCC → `references/banca-fcc.md`
+- CESPE/CEBRASPE → `references/banca-cespe.md`
+- FGV → `references/banca-fgv.md`
+- Banca não identificada → aplique os princípios gerais desta SKILL.md e informe ao usuário que a banca não pôde ser confirmada
 
 ---
 
-## 4. Quando não usar esta skill
-
-| Situação | Skill correta |
-|---|---|
-| Resolver uma questão, tirar dúvida de conteúdo, revisar um erro | `concurseira-fiscal` |
-| Corrigir redação discursiva ou estudo de caso | `corretor-discursivas-fcc` |
-| Registrar erro, ver revisões do dia, panorama de desempenho | `banco-de-erros` |
-| Imposto de Renda real do usuário | `contador-ir` |
-| Texto acadêmico, dissertação, artigo | `mestrado` |
-
-Esta skill decide **onde investir o tempo**. Ela não ensina conteúdo e não resolve
-questão individual. Recebendo uma questão avulsa, encaminhar para
-`concurseira-fiscal` em vez de responder aqui.
-
----
-
-## 5. Protocolo de incerteza
-
-- Número de artigo, súmula, CPC, NBC ou acórdão só é citado com confiança alta.
-  Não havendo, escrever o conteúdo da regra e marcar `[conferir dispositivo]`.
-- Nota de corte, peso por bloco e sistema de pontuação são parâmetros do **edital
-  específico**. Nunca presumir a partir de certame anterior: ler do edital em mãos
-  ou marcar `[conferir no edital]`.
-- Estatística de taxa de acerto por bloco só entra quando houver fonte. Estimativa
-  sai rotulada como estimativa, com a base do cálculo à vista.
-
----
-
-## 6. Checklist antes de entregar
+## 4. Checklist antes de entregar
 
 Antes de apresentar a resposta final, confirme internamente:
 
@@ -168,5 +131,4 @@ Antes de apresentar a resposta final, confirme internamente:
 - [ ] Insights do "candidato mediano" baseados nas provas, não em generalidades?
 - [ ] Cruzamentos entre disciplinas mapeados?
 - [ ] Ordem de ataque concreto e ordenado?
-- [ ] Tom em Português Brasileiro, sem emojis?
-- [ ] Todo dispositivo, corte e peso conferido ou marcado para conferência?
+- [ ] Tom em Português Brasileiro, sem emojis em contexto formal?

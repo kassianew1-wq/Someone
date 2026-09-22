@@ -12,6 +12,7 @@ arquitetura. Todas passam no validador oficial do `skill-creator`.
 | `corretor-discursivas-fcc` | Nota e devolutiva de discursiva no padrão FCC | Objetiva, dúvida de conteúdo |
 | `contador-ir` | Tributação real do usuário | Questão de prova sobre IR |
 | `mestrado` | Produção acadêmica, ABNT | Conteúdo de concurso |
+| `banco-de-erros` | Registro de erro e revisão espaçada | Resolver ou explicar a questão |
 
 Cada skill tem seção "Quando não usar" com a tabela de encaminhamento, para que a
 sobreposição de gatilhos deixe de ser resolvida por acaso.
@@ -109,8 +110,33 @@ As mais urgentes:
 - Edição vigente das NBRs de citação e referências.
 - Parâmetros de pessoa jurídica em `tabelas-vigentes.md`, nunca conferidos.
 
-## Próximos passos sugeridos
+## banco-de-erros
 
-`banco-de-erros`, que dá memória ao ciclo e torna `perfil-desempenho.md` derivado
-em vez de preenchido à mão; e `norma-vigente`, que resolve de forma sistemática a
-classe de problema que apareceu em duas skills por mecanismos diferentes.
+Skill nova, que fecha o ciclo. Um erro por linha em planilha do Google, com
+fallback para arquivo local quando não houver ferramenta de planilha na sessão.
+
+O núcleo é a taxonomia de seis tipos de erro, porque o tratamento depende dela:
+não sabia, confundiu, esqueceu, desatenção, interpretação, cálculo. A distinção
+que mais muda resultado é entre "não sabia" e "desatenção": a primeira pede horas
+de estudo, a segunda pede protocolo de leitura. Tratar desatenção como lacuna de
+conteúdo é o modo mais comum de estudar muito e não subir o percentual.
+
+Revisão espaçada em D+1, D+7 e D+30, com exceção para desatenção, que recebe
+intervalo único em D+7 por não ser problema de memória. Três reincidências no
+mesmo tema mudam o status e sinalizam que a classificação do erro provavelmente
+está errada.
+
+Integrações: `concurseira-fiscal` oferece o registro depois de corrigir questão
+errada; `corretor-discursivas-fcc` converte os itens de prioridade de melhoria em
+registro; `coach-concursos` cruza o banco com o peso do edital para transformar a
+matriz de prioridades de estimada em medida; e `perfil-desempenho.md` passa a ser
+derivado do banco em vez de preenchido à mão.
+
+Regra firme: nunca grava sem confirmação, e nunca simula gravação quando não há
+ferramenta disponível.
+
+## Próximo passo sugerido
+
+`norma-vigente`, que resolve de forma sistemática a classe de problema que
+apareceu em duas skills por mecanismos diferentes: conhecimento normativo
+congelado apresentado com confiança.

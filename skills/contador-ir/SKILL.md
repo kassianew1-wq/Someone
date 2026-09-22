@@ -146,6 +146,7 @@ os percentuais vigentes.
 |---|---|
 | Questão de prova sobre IRPF, IRPJ ou tributação | `concurseira-fiscal` |
 | Análise de edital ou prioridade de estudo | `coach-concursos` |
+| Registro de erro e revisão espaçada de concurso | `banco-de-erros` |
 | Artigo ou dissertação sobre política tributária | `mestrado` |
 
 A distinção com `concurseira-fiscal` é material: em prova, o critério é o gabarito

@@ -30,18 +30,7 @@ Estes princípios valem para QUALQUER texto acadêmico que a usuária produzir c
 
 ### 1. ABNT estrita, sempre
 
-Toda citação, referência e formatação obedece rigorosamente as NBRs **na edição
-vigente**. Nada de "quase ABNT" ou "estilo ABNT adaptado".
-
-**Regra de vigência, obrigatória.** Uma skill cuja promessa é precisão normativa
-não pode aplicar norma sem saber a edição. Antes de prescrever qualquer regra de
-forma (recuo, corpo de fonte, entrelinhamento, ordem de elementos), confirmar a
-edição vigente da NBR aplicável. As normas de citação e de referências foram
-revisadas depois da edição de 2002, e várias prescrições numéricas que circulam
-em manuais e modelos antigos vêm da redação antiga. Não havendo confirmação,
-descrever a regra e marcar `[conferir edição da NBR]` em vez de cravar o número.
-
-As normas que regem:
+Toda citação, referência, formatação obedece **rigorosamente** as NBRs vigentes. Nada de "quase ABNT" ou "estilo ABNT adaptado". As normas que regem:
 
 - **NBR 10520** — citações em documentos
 - **NBR 6023** — referências
@@ -119,16 +108,7 @@ Ou:
 
 ### Citação direta — mais de 3 linhas
 
-Bloco destacado do corpo do texto, com recuo à esquerda, corpo de fonte menor que
-o do texto, espaçamento simples e **sem aspas**, separado por um espaço do
-parágrafo anterior e do seguinte.
-
-`[conferir edição da NBR]` Os valores que circulam como padrão (recuo de 4 cm e
-corpo 10) vêm da edição de 2002 da NBR 10520. Confirmar na edição vigente e, se
-houver manual próprio da FGV EBAPE, nele — o manual institucional prevalece nos
-pontos em que detalha além da norma. Até a confirmação, aplicar o padrão adotado
-no documento e manter a consistência interna, que é o critério que a banca
-efetivamente verifica.
+Bloco recuado **4 cm da margem esquerda**, fonte tamanho **10**, espaçamento simples, **sem aspas**, separado do parágrafo anterior e seguinte por um espaço.
 
 > A literatura recente sobre tax morale aponta:
 >
@@ -242,16 +222,72 @@ Estrutura mínima esperada:
 
 ---
 
-## Periódicos e autores de referência
+## Periódicos referência (alto Qualis na área)
 
-Listas em `references/fontes.md`: periódicos de alto Qualis na área, periódicos
-internacionais, documentos institucionais de fonte primária e autores por eixo
-temático. Ler esse arquivo quando for sugerir fonte, avaliar a qualidade de uma
-referência trazida por ela, ou montar referencial teórico.
+### Brasileiros — Administração Pública / Gestão Pública
+- **Revista de Administração Pública (RAP)** — FGV EBAPE (essencial, é a casa)
+- **Cadernos EBAPE.BR** — FGV EBAPE
+- **Revista do Serviço Público (RSP)** — ENAP
+- **Revista de Administração Contemporânea (RAC)** — ANPAD
+- **Revista de Administração de Empresas (RAE)** — FGV EAESP
+- **Brazilian Administration Review (BAR)** — ANPAD (inglês, exposição internacional)
+- **Organizações & Sociedade (O&S)** — UFBA
 
-As listas são **semente**, não catálogo fechado. Fechado o recorte, buscar autores
-específicos do tema e produção dos últimos cinco anos nas bases (Portal de
-Periódicos CAPES, Scopus, Web of Science, SciELO, Google Acadêmico).
+### Brasileiros — Tributário e Fiscal
+- **Revista Direito Tributário Atual (RDTA)** — IBDT
+- **Revista Fórum de Direito Tributário (RFDT)** — Fórum
+- **Revista Dialética de Direito Tributário** (descontinuada mas histórica)
+- **Revista de Finanças Públicas, Tributação e Desenvolvimento (RFPTD)** — UERJ
+- **Revista Brasileira de Estudos Tributários** (IPEA produz documentos relevantes também)
+
+### Internacionais
+- **Public Administration Review** (EUA)
+- **Governance** (Wiley)
+- **Public Administration** (UK)
+- **Journal of Public Administration Research and Theory (JPART)**
+- **International Public Management Journal**
+- **National Tax Journal** (EUA, fiscal)
+- **International Tax and Public Finance** (Springer)
+- **Public Finance Review**
+- **Tax Notes International**
+
+### Documentos institucionais (fontes primárias)
+- Receita Federal — relatórios, estudos tributários, dados abertos
+- CARF — acórdãos e jurisprudência administrativa
+- CONFAZ — convênios e atos
+- IPEA — Texto para Discussão (TD), Carta de Conjuntura
+- ENAP — Cadernos e estudos sobre gestão pública
+- TCU e CGU — relatórios de auditoria e fiscalização
+- OCDE — Tax Policy Studies, Revenue Statistics, BEPS Reports
+- FMI — Working Papers, Country Reports, Fiscal Monitor
+- Banco Mundial — Doing Business (descontinuado mas histórico), Business Ready
+- BID — relatórios fiscais para América Latina
+
+---
+
+## Autores de referência (a expandir conforme o recorte)
+
+### Administração Pública (geral)
+**Brasil:** Luiz Carlos Bresser-Pereira, Humberto Falcão Martins, Marcelo Marchesini, José Matias-Pereira, Maria das Graças Rua, Caio Marini, Alketa Peci, Fernando Filgueiras.
+
+**Internacionais:** Christopher Pollitt, Geert Bouckaert, B. Guy Peters, Mark Moore (valor público), Janine O'Flynn, Lotte Bøgh Andersen.
+
+### Federalismo fiscal e tributação no Brasil
+Fernando Rezende, Sergio Prado, José Roberto Afonso, Marcos Mendes, Fernando Veloso, Sérgio Wulff Gobetti, Rodrigo Orair, Marciano Buffon.
+
+### Direito tributário (quando o recorte exigir base dogmática)
+Luís Eduardo Schoueri, Humberto Ávila, Heleno Tôrres, Misabel Derzi, Sacha Calmon, Marco Aurélio Greco, Roque Carrazza, Paulo de Barros Carvalho, Hugo de Brito Machado.
+
+### Tax morale, compliance e comportamento
+Benno Torgler, James Alm, Joel Slemrod, Erich Kirchler, Lars Feld, Friedrich Schneider. Brasil: Eduardo Fagnani, Fernando Gaiger.
+
+### Administração tributária e capacidade estatal
+Richard Bird, Eric Zolt, Milka Casanegra de Jantscher, Margaret Levi (consentimento tributário). Brasil: Marcelo Lettieri, Marcelo Medeiros.
+
+### Reforma Tributária brasileira (literatura recente)
+Bernard Appy, Eurico Marcos Diniz de Santi, José Roberto Afonso, Vanessa Rahal Canado, Melina Rocha Lukic, Isaías Coelho.
+
+> Esta lista é seed. Quando o tema fechar, Claude deve buscar **autores específicos do recorte** e **produção dos últimos 5 anos** na base CAPES, Scopus, Web of Science, SciELO e Google Scholar.
 
 ---
 
@@ -301,26 +337,9 @@ Qualquer afirmação no texto que não seja senso comum acadêmico precisa de fo
 ### Quando o tema ainda estiver aberto
 
 Ajudar a usuária a refinar problema de pesquisa por iteração:
-- Tema (área), depois recorte (subárea e objeto), depois problema (pergunta), depois objetivos.
+- Tema (área) → recorte (subárea + objeto) → problema (pergunta) → objetivos.
 - Sempre testar: "Isso é respondível com pesquisa empírica ou bibliográfica viável em 24 meses?"
 - Para mestrado profissional: "Isso gera algum produto técnico aplicável a um órgão real?"
-
----
-
-## Quando não usar esta skill
-
-| Situação | Skill correta |
-|---|---|
-| Questão ou conteúdo de concurso, ainda que de matéria tributária | `concurseira-fiscal` |
-| Análise de edital, prioridade de estudo, padrão de banca | `coach-concursos` |
-| Correção de discursiva de concurso | `corretor-discursivas-fcc` |
-| Registro de erro e revisão espaçada de concurso | `banco-de-erros` |
-| Imposto de Renda real dela | `contador-ir` |
-
-O critério de separação é o destinatário do texto. Aqui o leitor é a banca
-acadêmica e a régua é a norma científica. Em concurso o leitor é o corretor da
-banca e a régua é o espelho. Os registros são incompatíveis e não devem se
-misturar na mesma resposta.
 
 ---
 
@@ -332,10 +351,7 @@ misturar na mesma resposta.
 - **Pode discordar com fundamento.** Academia exige criticidade — se um argumento dela for fraco, o Claude diz, com base. Não suaviza.
 - **Exemplos concretos sempre que possível**, preferencialmente da realidade fiscal/tributária brasileira.
 - **Reconhece complexidade** — não simplifica demais. Mas explica com clareza, sem academiquês performático.
-- **Cita autores e obras com precisão.** Nunca produzir referência, ano, volume,
-  página ou DOI por plausibilidade. Não havendo certeza do dado exato, escrever o
-  argumento e marcar `[conferir referência]`, ou pedir que ela confirme. Referência
-  inventada em texto acadêmico é falha grave e a banca localiza.
+- **Cita autores e obras com precisão.** Se não tiver certeza da referência exata, avisa: "Vou ter que checar essa referência — me dá um instante" ou pede pra ela confirmar.
 
 ---
 

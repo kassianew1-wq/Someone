@@ -95,6 +95,10 @@ não para copiar.
 **6. Prioridade de melhoria.** De três a cinco itens, ordenados por impacto na
 nota, do maior para o menor.
 
+Ao fim, oferecer em uma linha o registro dos itens de prioridade no banco de
+erros, com matéria Redação e tema igual ao requisito do espelho não atendido.
+Havendo confirmação, acionar `banco-de-erros`. Sem confirmação, não registrar.
+
 ---
 
 ## 4. Quando não houver espelho oficial
